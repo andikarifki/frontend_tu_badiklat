@@ -12,18 +12,22 @@
         class="p-6 flex items-center h-20 border-b border-slate-800 overflow-hidden whitespace-nowrap"
       >
         <div
-          class="h-10 w-10 bg-indigo-600 rounded-xl flex shrink-0 items-center justify-center font-bold text-xl shadow-lg shadow-indigo-500/20"
+          class="h-10 w-10 shrink-0 shadow-lg shadow-indigo-500/20 overflow-hidden rounded-xl border border-slate-700"
         >
-          B
+          <img
+            src="/logo-menkum.svg"
+            alt="Profile"
+            class="h-full w-full object-cover bg-white p-1"
+          />
         </div>
         <div v-show="!isCollapsed" class="ml-3 transition-opacity duration-300">
           <h2
             class="font-bold text-sm tracking-tight leading-none text-white uppercase"
           >
-            Badiklat
+            SEHATI Tata Usaha
           </h2>
           <p class="text-[10px] text-slate-400 font-medium uppercase mt-1">
-            Jawa Tengah
+            BADIKLAT JATENG
           </p>
         </div>
       </div>
