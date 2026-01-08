@@ -1,5 +1,5 @@
 <template>
-  <div v-if="isLoginPage" class="bg-slate-50">
+  <div v-if="$route.meta.hideSidebar" class="bg-slate-50 min-h-screen">
     <router-view></router-view>
   </div>
 
@@ -157,9 +157,6 @@ const $route = useRoute();
 const $router = useRouter();
 
 const isCollapsed = ref(false);
-
-// LOGIKA PENTING: Cek apakah halaman saat ini adalah login (/)
-const isLoginPage = computed(() => $route.path === "/");
 
 const handleLogout = async () => {
   if (confirm("Apakah anda yakin ingin logout?")) {
