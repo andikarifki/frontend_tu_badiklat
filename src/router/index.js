@@ -7,6 +7,7 @@ import DaftarMagang from "../views/Magang/DaftarMagang.vue";
 import Pengumuman from "../views/Magang/Pengumuman.vue";
 import PesertaMagang from "../views/PesertaMagang.vue";
 import CalonMagang from "../views/CalonMagang.vue";
+import ListBMN from "../views/ListBMN.vue";
 
 const routes = [
   {
@@ -40,6 +41,11 @@ const routes = [
     path: "/calon-magang",
     name: "CalonMagang",
     component: CalonMagang,
+  },
+  {
+    path: "/bmn",
+    name: "Bmn",
+    component: ListBMN,
   },
   {
     path: "/daftar-magang",

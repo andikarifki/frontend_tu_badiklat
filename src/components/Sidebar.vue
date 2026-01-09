@@ -30,7 +30,7 @@
     <nav class="flex-1 p-4 space-y-2 mt-4 overflow-y-auto custom-scrollbar">
       <router-link
         to="/dashboard"
-        class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all group overflow-hidden whitespace-nowrap"
+        class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all group overflow-hidden whitespace-nowrap text-slate-400 hover:text-white hover:bg-slate-800"
         active-class="bg-indigo-600 text-white shadow-lg shadow-indigo-600/30"
       >
         <svg
@@ -54,7 +54,7 @@
 
       <router-link
         to="/pegawai"
-        class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all group overflow-hidden whitespace-nowrap"
+        class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all group overflow-hidden whitespace-nowrap text-slate-400 hover:text-white hover:bg-slate-800"
         active-class="bg-indigo-600 text-white shadow-lg shadow-indigo-600/30"
       >
         <svg
@@ -79,13 +79,15 @@
       <div class="space-y-1">
         <button
           @click="toggleMagang"
-          class="w-full flex items-center justify-between px-4 py-3 rounded-xl transition-all group overflow-hidden whitespace-nowrap text-white hover:bg-slate-800"
-          :class="{ 'bg-slate-800/50': isMagangOpen && !isCollapsed }"
+          class="w-full flex items-center justify-between px-4 py-3 rounded-xl transition-all group overflow-hidden whitespace-nowrap text-slate-400 hover:text-white hover:bg-slate-800"
+          :class="{
+            'bg-slate-800/50 text-white': isMagangOpen && !isCollapsed,
+          }"
         >
           <div class="flex items-center gap-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6 shrink-0 text-slate-400 group-hover:text-white"
+              class="h-6 w-6 shrink-0"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -141,6 +143,30 @@
           </div>
         </transition>
       </div>
+
+      <router-link
+        to="/bmn"
+        class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all group overflow-hidden whitespace-nowrap text-slate-400 hover:text-white hover:bg-slate-800"
+        active-class="bg-indigo-600 text-white shadow-lg shadow-indigo-600/30"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6 shrink-0"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+          />
+        </svg>
+        <span v-show="!isCollapsed" class="font-semibold text-sm"
+          >Daftar BMN</span
+        >
+      </router-link>
     </nav>
 
     <div class="p-4 border-t border-slate-800 space-y-2">
@@ -198,52 +224,19 @@ const emit = defineEmits(["update:modelValue", "logout"]);
 const isCollapsed = ref(false);
 const isMagangOpen = ref(false);
 
-// Menangani toggle collapse sidebar
 const toggleCollapse = () => {
   isCollapsed.value = !isCollapsed.value;
-  // Tutup sub-menu magang jika sidebar diciutkan
   if (isCollapsed.value) {
     isMagangOpen.value = false;
   }
 };
 
-// Menangani toggle sub-menu magang
 const toggleMagang = () => {
-  if (isCollapsed.value) {
-    isCollapsed.value = false; // Buka sidebar dulu jika diklik saat ciut
-  }
+  if (isCollapsed.value) isCollapsed.value = false;
   isMagangOpen.value = !isMagangOpen.value;
 };
 
-// Sync state ke parent (untuk margin konten utama)
 watchEffect(() => {
   emit("update:modelValue", isCollapsed.value);
 });
 </script>
-
-<style scoped>
-/* Animasi buka tutup sub-menu */
-.expand-enter-active,
-.expand-leave-active {
-  transition: all 0.3s ease-in-out;
-  max-height: 100px;
-}
-
-.expand-enter-from,
-.expand-leave-to {
-  max-height: 0;
-  opacity: 0;
-}
-
-/* Custom scrollbar untuk nav jika menu sangat banyak */
-.custom-scrollbar::-webkit-scrollbar {
-  width: 4px;
-}
-.custom-scrollbar::-webkit-scrollbar-track {
-  background: transparent;
-}
-.custom-scrollbar::-webkit-scrollbar-thumb {
-  background: #334155;
-  border-radius: 10px;
-}
-</style>
