@@ -2,10 +2,19 @@ import { createRouter, createWebHistory } from "vue-router";
 import Dashboard from "../views/Dashboard.vue";
 import Pegawai from "../views/Pegawai.vue";
 import Login from "../views/Login.vue";
+import Beranda from "../views/Magang/Beranda.vue";
+import DaftarMagang from "../views/Magang/DaftarMagang.vue";
+import Pengumuman from "../views/Magang/Pengumuman.vue";
 
 const routes = [
   {
     path: "/",
+    name: "Beranda",
+    component: Beranda,
+    meta: { hideSidebar: true },
+  },
+  {
+    path: "/admin",
     name: "Login",
     component: Login,
     meta: { hideSidebar: true },
@@ -19,6 +28,18 @@ const routes = [
     path: "/pegawai",
     name: "Pegawai",
     component: Pegawai,
+  },
+  {
+    path: "/daftar-magang",
+    name: "DaftarMagang",
+    component: DaftarMagang,
+    meta: { hideSidebar: true },
+  },
+  {
+    path: "/pengumuman",
+    name: "Pengumuman",
+    component: Pengumuman,
+    meta: { hideSidebar: true },
   },
 ];
 
