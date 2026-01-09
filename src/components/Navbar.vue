@@ -9,12 +9,12 @@
         />
         <div>
           <h1 class="text-xl font-bold tracking-tight leading-tight">
-            Badiklat Hukum
+            SEHATI-TU
           </h1>
           <p
             class="text-[10px] uppercase tracking-widest text-blue-200 leading-none"
           >
-            Jawa Tengah
+            BADIKLAT Jawa Tengah
           </p>
         </div>
       </div>

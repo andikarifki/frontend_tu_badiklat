@@ -3,11 +3,31 @@
     <div
       class="max-w-4xl mx-auto bg-white shadow-2xl rounded-2xl overflow-hidden"
     >
-      <div class="bg-blue-900 p-8 text-white text-center">
-        <h2 class="text-3xl font-bold">Formulir Pendaftaran Magang</h2>
-        <p class="text-blue-200 mt-2 text-sm uppercase tracking-widest">
-          Badiklat Hukum Jawa Tengah
-        </p>
+      <div
+        class="bg-blue-900 p-10 text-white text-center rounded-t-xl border-b-4 border-orange-500"
+      >
+        <div
+          class="flex flex-col md:flex-row items-center justify-center gap-4 mb-4"
+        >
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Logo_of_the_Ministry_of_Law_and_Human_Rights_of_the_Republic_of_Indonesia.svg/1280px-Logo_of_the_Ministry_of_Law_and_Human_Rights_of_the_Republic_of_Indonesia.svg.png"
+            alt="Logo Kemenkumham"
+            class="h-20 w-auto drop-shadow-lg"
+          />
+
+          <div class="hidden md:block w-px h-16 bg-blue-400/50 mx-2"></div>
+
+          <div class="text-center md:text-left">
+            <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">
+              Formulir Pendaftaran <span class="text-orange-400">Magang</span>
+            </h2>
+            <p
+              class="text-blue-200 text-sm md:text-base font-medium uppercase tracking-[0.2em] mt-1"
+            >
+              Badiklat Hukum Jawa Tengah
+            </p>
+          </div>
+        </div>
       </div>
 
       <form @submit.prevent="handleSubmit" class="p-8 space-y-8">
@@ -149,12 +169,12 @@
         </section>
 
         <div class="flex items-center justify-end space-x-4 pt-6">
-          <button
-            type="button"
-            class="px-6 py-2.5 text-sm font-medium text-gray-600 hover:text-gray-800"
+          <router-link
+            to="/"
+            class="px-6 py-2.5 text-sm font-medium text-gray-600 hover:text-gray-800 transform hover:-translate-y-1 transition duration-200 inline-block"
           >
             Batal
-          </button>
+          </router-link>
           <button
             type="submit"
             class="px-10 py-3 bg-blue-600 text-white font-bold rounded-lg shadow-lg hover:bg-blue-700 transform hover:-translate-y-1 transition duration-200"

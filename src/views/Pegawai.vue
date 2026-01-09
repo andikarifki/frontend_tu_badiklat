@@ -253,9 +253,10 @@
 
           <div>
             <label
-              class="block text-[10px] font-bold text-slate-400 uppercase mb-1"
-              >Nama Lengkap</label
+              class="block text-sm font-bold text-slate-600 uppercase mb-1.5 tracking-wide"
             >
+              Nama Lengkap
+            </label>
             <input
               v-model="form.nama"
               type="text"
@@ -267,9 +268,10 @@
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label
-                class="block text-[10px] font-bold text-slate-400 uppercase mb-1"
-                >NIP</label
+                class="block text-sm font-bold text-slate-600 uppercase mb-1.5 tracking-wide"
               >
+                NIP
+              </label>
               <input
                 v-model="form.nip"
                 type="text"
@@ -279,9 +281,10 @@
             </div>
             <div>
               <label
-                class="block text-[10px] font-bold text-slate-400 uppercase mb-1"
-                >Golongan</label
+                class="block text-sm font-bold text-slate-600 uppercase mb-1.5 tracking-wide"
               >
+                Golongan
+              </label>
               <input
                 v-model="form.golongan"
                 type="text"
@@ -292,9 +295,10 @@
 
           <div>
             <label
-              class="block text-[10px] font-bold text-slate-400 uppercase mb-1"
-              >Pangkat</label
+              class="block text-sm font-bold text-slate-600 uppercase mb-1.5 tracking-wide"
             >
+              Pangkat
+            </label>
             <input
               v-model="form.pangkat"
               type="text"
@@ -304,9 +308,10 @@
 
           <div>
             <label
-              class="block text-[10px] font-bold text-slate-400 uppercase mb-1"
-              >Jabatan</label
+              class="block text-sm font-bold text-slate-600 uppercase mb-1.5 tracking-wide"
             >
+              Jabatan
+            </label>
             <input
               v-model="form.jabatan"
               type="text"
@@ -317,16 +322,16 @@
 
           <div>
             <label
-              class="block text-[10px] font-bold text-slate-400 uppercase mb-1"
-              >Foto Profil</label
+              class="block text-sm font-bold text-slate-600 uppercase mb-1.5 tracking-wide"
             >
+              Foto Profil
+            </label>
             <input
               type="file"
               @change="handleFileUpload"
-              class="block w-full text-xs text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:bg-indigo-50 file:text-indigo-700 hover:file:bg-indigo-100"
+              class="block w-full text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:bg-indigo-50 file:text-indigo-700 hover:file:bg-indigo-100"
             />
           </div>
-
           <div class="pt-4 flex flex-col md:flex-row gap-3">
             <button
               type="button"

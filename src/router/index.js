@@ -5,6 +5,8 @@ import Login from "../views/Login.vue";
 import Beranda from "../views/Magang/Beranda.vue";
 import DaftarMagang from "../views/Magang/DaftarMagang.vue";
 import Pengumuman from "../views/Magang/Pengumuman.vue";
+import PesertaMagang from "../views/PesertaMagang.vue";
+import CalonMagang from "../views/CalonMagang.vue";
 
 const routes = [
   {
@@ -28,6 +30,16 @@ const routes = [
     path: "/pegawai",
     name: "Pegawai",
     component: Pegawai,
+  },
+  {
+    path: "/peserta-magang",
+    name: "PesertaMagang",
+    component: PesertaMagang,
+  },
+  {
+    path: "/calon-magang",
+    name: "CalonMagang",
+    component: CalonMagang,
   },
   {
     path: "/daftar-magang",
