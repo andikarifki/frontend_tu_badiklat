@@ -14,7 +14,7 @@
           <p
             class="text-[10px] uppercase tracking-widest text-blue-200 leading-none"
           >
-            BADIKLAT Jawa Tengah
+            BADIKLAT Hukum Jawa Tengah
           </p>
         </div>
       </div>
